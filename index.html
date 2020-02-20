@@ -5,7 +5,57 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Techinacal</title>
 </head>
+<style>
+    nav{
+    width: 300px;
+    height: 100%;
+    margin: 0px 10px 10px 10px;
+    position: fixed;
+    background:none;
+    
+    }
+    nav a{
+    display: flex;
+    flex-direction: column;
+    font-size: 20px;
+    margin: 25px 10px 10px 10px;
+    text-decoration: none;
+    }
+    nav li{
+    list-style-type: none;
+    }
+    nav h1{
+    font-size: 35px;
+    }
+    body{
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+
+
+    }    
+</style>
 <body>
+    <nav id=" navbar">
+    <h1>JS Documentation</h1>
+    <ol>
+    <li><a href="#Introduction">Introduction</a></li>
+    <li><a href="#What you should already know">What you should already know</a></li>
+    <li><a href="#JavaScript and Java">JavaScript and Java</a>
+    <li><a href="#Hello world">Hello world</a>
+    <li><a href="#Variables">Variables</a></li>
+    <li><a href="#Declaring variables">Declaring variables</a></li>
+    <li><a href="#Variable scope">Variable scope</a></li>
+    <li><a href="#Global variables">Global variables</a></li>
+    <li><a href="#Constants">Constants</a></li>
+    <li><a href="#Data types">Data types</a></li>
+    <li><a href="#if...else statement">if...else statement</a></li>
+    <li><a href="#while statement">while statement</a></li>
+    <li><a href="#Function declarations">Function declarations</a></li>
+    <li><a href="#Reference">Reference</a></li>
+    </ol>
+</nav>
+<div id="Main">
 <div id="Introduction">
     <h1>Introduction</h1>
     <p>JavaScript is a cross-platform, object-oriented scripting language. It is a small and lightweight language. Inside a host environment (for example, a web browser), JavaScript can be connected to the objects of its environment to provide programmatic control over them.<br>JavaScript contains a standard library of objects, such as Array, Date, and Math, and a core set of language elements such as operators, control structures, and statements. Core JavaScript can be extended for a variety of purposes by supplementing it with additional objects; for example:<br></p>
@@ -28,7 +78,7 @@
     <p>JavaScript and Java are similar in some ways but fundamentally different in some others. The JavaScript language resembles Java but does not have Java's static typing and strong type checking. JavaScript follows most Java expression syntax, naming conventions and basic control-flow constructs which was the reason why it was renamed from LiveScript to JavaScript.<br>In contrast to Java's compile-time system of classes built by declarations, JavaScript supports a runtime system based on a small number of data types representing numeric, Boolean, and string values.<br> JavaScript has a prototype-based object model instead of the more common class-based object model. The prototype-based model provides dynamic inheritance; that is, what is inherited can vary for individual objects. JavaScript also supports functions without any special declarative requirements. Functions can be properties of objects, executing as loosely typed methods.JavaScript is a very free-form language compared to Java. You do not have to declare all variables, classes, and methods. You do not have to be concerned with whether methods are public, private, or protected, and you do not have to implement interfaces. Variables, parameters, and function return types are not explicitly typed.</p>
 </div>
 <div id="Hello world">
-    <h1></h1>
+    <h1>Hello world</h1>
     <article>To get started with writing JavaScript, open the Scratchpad and write your first "Hello world" JavaScript code:<br>
         <code>function greetMe(yourName) { alert("Hello " + yourName); }<br>greetMe("World");</code>
     Select the code in the pad and hit Ctrl+R to watch it unfold in your browser!</article>
@@ -139,6 +189,7 @@
     <ul>
         <li>All the documentation in this page is taken from <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide" target="_blank">MDN</a></li>
     </ul>
+</div>
 </div>
 </body>
 </html>
