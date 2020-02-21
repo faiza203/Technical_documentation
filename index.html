@@ -17,6 +17,7 @@
       position: sticky;
       top: 0;
       border-right: solid ;
+      margin-left: none;
     }
     nav a {
       display: flex;
@@ -24,7 +25,7 @@
       font-size: 20px;
       margin: 10px 10px 10px 10px;
       text-decoration: none;
-      padding-left: none;
+      padding-left:25px;
     }
     nav ol{
       padding-inline-start: 0px;
@@ -32,22 +33,23 @@
     nav li {
       list-style-type: none;
       border-top: solid black 1px;
-      text-align: center;
+      text-align: left;
     }
     nav .aaa{
       margin-bottom: 50px;
     }
     nav header {
       font-size: 39px;
-      margin: 10px;
       text-align: center;
       margin-top: 25px;
+      margin: 10px 10px 10px 10px;
+    }
     }
     body {
       display: flex;
       flex-direction: row;
       position: absolute;
-      background-position: fixed;
+      width: 1900px;
     }
     #Main{
       padding: 20px 0px 180px 40px;
@@ -86,7 +88,7 @@
           <a href="#What you should already know"
             >What you should already know</a>
         </li>
-        <li><a href="#JavaScript and Java">JavaScript and Java</a></li>
+        <li><a href="#JavaScript and Java" class="no1">JavaScript and Java</a></li>
         <li><a href="#Hello world">Hello world</a></li>
         <li><a href="#Variables">Variables</a></li>
         <li><a href="#Declaring variables">Declaring variables</a></li>
@@ -178,8 +180,7 @@
           To get started with writing JavaScript, open the Scratchpad and write
           your first "Hello world" JavaScript code:<br />
           <code
-            >function greetMe(yourName) { alert("Hello " + yourName); }<br />greetMe("World");</code
-          >
+            >function greetMe(yourName) { alert("Hello " + yourName); }greetMe("World");</code>
           Select the code in the pad and hit Ctrl+R to watch it unfold in your
           browser!
         </article>
@@ -232,10 +233,7 @@
           <code>if (true) { var x = 5; } console.log(x); // 5</code><br />
           This behavior changes, when using the let declaration introduced in
           ECMAScript 2015.<br />
-          <code
-            >if (true) { let y = 5; } console.log(y); // ReferenceError: y is
-            not defined</code
-          >
+          <code>if (true) { let y = 5; } console.log(y); // ReferenceError: y is not defined</code>
         </article>
       </div>
       <div id="Global variables">
@@ -265,17 +263,10 @@
           assumed to represent a variable.<br />
           You cannot declare a constant with the same name as a function or
           variable in the same scope. For example:<br />
-          <code
-            >// THIS WILL CAUSE AN ERROR function f() {}; const f = 5; // THIS
-            WILL<br />CAUSE AN ERROR ALSO function f() { const g = 5; var g;
-            //statements<br />}<br
-          /></code>
+          <code>// THIS WILL CAUSE AN ERROR function f() {}; const f = 5; // THIS WILL<br />CAUSE AN ERROR ALSO function f() { const g = 5; var g; //statements /}/</code>
           However, object attributes are not protected, so the following
           statement is executed without problems.
-          <code
-            >const MY_OBJECT = {"key": "value"}; MY_OBJECT.key =
-            "otherValue";</code
-          >
+          <code>const MY_OBJECT = {"key": "value"}; MY_OBJECT.key = "otherValue";</code>
         </article>
       </div>
       <div id="Data types">
@@ -314,30 +305,14 @@
           general, it's good practice to always use block statements, especially
           when nesting if statements:
           <code>if (condition) { statement_1; } else { statement_2; }</code>
-          <code
-            >condition can be any expression that evaluates to true or false.
-            See Boolean for an explanation of what evaluates to true and false.
-            If condition evaluates to true, statement_1 is executed; otherwise,
-            statement_2 is executed. statement_1 and statement_2 can be any
-            statement, including further nested if statements.<br />You may also
-            compound the statements using else if to have multiple conditions
-            tested in sequence, as follows:</code
-          >
-          <code
-            >if (condition_1) { statement_1; } else if (condition_2) {
-            statement_2;<br />} else if (condition_n) { statement_n; } else {
-            statement_last; }</code
-          >
+          <code>condition can be any expression that evaluates to true or false. See Boolean for an explanation of what evaluates to true and false.If condition evaluates to true, statement_1 is executed; otherwise, statement_2 is executed. statement_1 and statement_2 can be  statement, including further nested if statements.<br />You may also compound the statements using else if to have multiple condition stested in sequence, as follows:</code>
+          <code>if (condition_1) { statement_1; } else if (condition_2) { statement_2;<br />} else if (condition_n) { statement_n; } else { statement_last; }</code>
           In the case of multiple conditions only the first logical condition
           which evaluates to true will be executed. To execute multiple
           statements, group them within a block statement ({ ... }) . In
           general, it's good practice to always use block statements, especially
           when nesting if statements:
-          <code
-            >if (condition) { statement_1_runs_if_condition_is_true;<br />statement_2_runs_if_condition_is_true;
-            } else {<br />statement_3_runs_if_condition_is_false;<br />statement_4_runs_if_condition_is_false;
-            }<br
-          /></code>
+          <code>if (condition) { statement_1_runs_if_condition_is_true;<br />statement_2_runs_if_condition_is_tru} else {<br />statement_3_runs_if_condition_is_false;<br />statement_4_runs_if_condition_is_false;}<br/></code>
           It is advisable to not use simple assignments in a conditional
           expression, because the assignment can be confused with equality when
           glancing over the code. For example, do not use the following code:
