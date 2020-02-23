@@ -9,10 +9,9 @@
     body {
       display: flex;
       flex-direction: row;
-    
+
     }
     nav {
-      width: 20em;
       height: 100%;
       background: none;
       position: sticky;
@@ -22,6 +21,7 @@
     }
     nav a {
       display: flex;
+      color: black;
       flex-direction: column;
       font-size: 20px;
       margin: 10px 10px 10px 10px;
@@ -50,12 +50,11 @@
       display: flex;
       flex-direction: row;
       position: absolute;
-      width: 1900px;
     }
     #Main{
       padding: 20px 0px 180px 40px;
       margin: 10px 10px 10px 10px;
-      width: 1170px;
+      width: 75%;
     }
     #Main h1{
       font-size: 35px;
@@ -87,9 +86,12 @@
         <li><a href="#Introduction">Introduction</a></li>
         <li>
           <a href="#What you should already know"
-            >What you should already know</a>
+            >What you should already know</a
+          >
         </li>
-        <li><a href="#JavaScript and Java" class="no1">JavaScript and Java</a></li>
+        <li>
+          <a href="#JavaScript and Java" class="no1">JavaScript and Java</a>
+        </li>
         <li><a href="#Hello world">Hello world</a></li>
         <li><a href="#Variables">Variables</a></li>
         <li><a href="#Declaring variables">Declaring variables</a></li>
@@ -110,12 +112,15 @@
           JavaScript is a cross-platform, object-oriented scripting language. It
           is a small and lightweight language. Inside a host environment (for
           example, a web browser), JavaScript can be connected to the objects of
-          its environment to provide programmatic control over them.<br></p>
-          <p>JavaScriptcontains a standard library of objects, such as Array, Date, and Math,
-          and a core set of language elements such as operators, control
-          structures, and statements. Core JavaScript can be extended for a
-          variety of purposes by supplementing it with additional objects; for
-          example:<br>
+          its environment to provide programmatic control over them.<br />
+        </p>
+
+        <p>
+          JavaScriptcontains a standard library of objects, such as Array, Date,
+          and Math, and a core set of language elements such as operators,
+          control structures, and statements. Core JavaScript can be extended
+          for a variety of purposes by supplementing it with additional objects;
+          for example:<br />
         </p>
         <ul>
           <li>
@@ -181,7 +186,9 @@
           To get started with writing JavaScript, open the Scratchpad and write
           your first "Hello world" JavaScript code:<br />
           <code
-            >function greetMe(yourName) { alert("Hello " + yourName); }greetMe("World");</code>
+            >function greetMe(yourName) { alert("Hello " + yourName);
+            }greetMe("World");</code
+          >
           Select the code in the pad and hit Ctrl+R to watch it unfold in your
           browser!
         </article>
@@ -234,7 +241,10 @@
           <code>if (true) { var x = 5; } console.log(x); // 5</code><br />
           This behavior changes, when using the let declaration introduced in
           ECMAScript 2015.<br />
-          <code>if (true) { let y = 5; } console.log(y); // ReferenceError: y is not defined</code>
+          <code
+            >if (true) { let y = 5; } console.log(y); // ReferenceError: y is
+            not defined</code
+          >
         </article>
       </div>
       <div id="Global variables">
@@ -264,10 +274,17 @@
           assumed to represent a variable.<br />
           You cannot declare a constant with the same name as a function or
           variable in the same scope. For example:<br />
-          <code>// THIS WILL CAUSE AN ERROR function f() {}; const f = 5; // THIS WILL<br />CAUSE AN ERROR ALSO function f() { const g = 5; var g; //statements /}/</code>
+          <code
+            >// THIS WILL CAUSE AN ERROR function f() {}; const f = 5; // THIS
+            WILL<br />CAUSE AN ERROR ALSO function f() { const g = 5; var g;
+            //statements /}/</code
+          >
           However, object attributes are not protected, so the following
           statement is executed without problems.
-          <code>const MY_OBJECT = {"key": "value"}; MY_OBJECT.key = "otherValue";</code>
+          <code
+            >const MY_OBJECT = {"key": "value"}; MY_OBJECT.key =
+            "otherValue";</code
+          >
         </article>
       </div>
       <div id="Data types">
@@ -306,14 +323,29 @@
           general, it's good practice to always use block statements, especially
           when nesting if statements:
           <code>if (condition) { statement_1; } else { statement_2; }</code>
-          <code>condition can be any expression that evaluates to true or false. See Boolean for an explanation of what evaluates to true and false.If condition evaluates to true, statement_1 is executed; otherwise, statement_2 is executed. statement_1 and statement_2 can be  statement, including further nested if statements.<br />You may also compound the statements using else if to have multiple condition stested in sequence, as follows:</code>
-          <code>if (condition_1) { statement_1; } else if (condition_2) { statement_2;<br />} else if (condition_n) { statement_n; } else { statement_last; }</code>
+          <code
+            >condition can be any expression that evaluates to true or false.
+            See Boolean for an explanation of what evaluates to true and
+            false.If condition evaluates to true, statement_1 is executed;
+            otherwise, statement_2 is executed. statement_1 and statement_2 can
+            be statement, including further nested if statements.<br />You may
+            also compound the statements using else if to have multiple
+            condition stested in sequence, as follows:</code
+          >
+          <code
+            >if (condition_1) { statement_1; } else if (condition_2) {
+            statement_2;<br />} else if (condition_n) { statement_n; } else {
+            statement_last; }</code
+          >
           In the case of multiple conditions only the first logical condition
           which evaluates to true will be executed. To execute multiple
           statements, group them within a block statement ({ ... }) . In
           general, it's good practice to always use block statements, especially
           when nesting if statements:
-          <code>if (condition) { statement_1_runs_if_condition_is_true;<br />statement_2_runs_if_condition_is_tru} else {<br />statement_3_runs_if_condition_is_false;<br />statement_4_runs_if_condition_is_false;}<br/></code>
+          <code
+            >if (condition) { statement_1_runs_if_condition_is_true;<br />statement_2_runs_if_condition_is_tru}
+            else {<br />statement_3_runs_if_condition_is_false;<br />statement_4_runs_if_condition_is_false;}<br
+          /></code>
           It is advisable to not use simple assignments in a conditional
           expression, because the assignment can be confused with equality when
           glancing over the code. For example, do not use the following code:
