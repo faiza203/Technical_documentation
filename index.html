@@ -9,101 +9,111 @@
     body {
       display: flex;
       flex-direction: row;
-
     }
     nav {
-      height: 100%;
+      height: 95%;
       background: none;
+      border-right: solid;
+      margin-left: none;
+      width: 300px;
       position: sticky;
       top: 0;
-      border-right: solid ;
-      margin-left: none;
     }
     nav a {
       display: flex;
-      color: black;
+      color: #4d4e53;
       flex-direction: column;
       font-size: 20px;
-      margin: 10px 10px 10px 10px;
+      margin: 15px 0px 15px 0px;
       text-decoration: none;
-      padding-left:25px;
+      padding-left: 25px;
     }
-    nav ol{
+    nav #ol {
       padding-inline-start: 0px;
+      overflow-x: hidden;
+      overflow-y: auto;
+      position: sticky;
+      top: 0;
     }
-    nav li {
+    nav p {
       list-style-type: none;
       border-top: solid black 1px;
       text-align: left;
     }
-    nav .aaa{
-      margin-bottom: 50px;
+    nav .aaa {
+      margin-bottom: -20px;
     }
-    nav header {
-      font-size: 39px;
+    nav .aa{
+      margin-top: 80px;
+    }
+    nav h1 {
+      font-size: 30px;
       text-align: center;
       margin-top: 25px;
-      margin: 10px 10px 10px 10px;
-    }
+      margin: 20px 10px 10px 10px;
+      position: fixed;
+      font-family: "Open Sans", Arial, sans-serif;
+      font-weight: 100;
+      background-color: white;
     }
     body {
       display: flex;
       flex-direction: row;
       position: absolute;
     }
-    #Main{
+    #Main {
       padding: 20px 0px 180px 40px;
       margin: 10px 10px 10px 10px;
       width: 75%;
     }
-    #Main h1{
+    #Main h1 {
       font-size: 35px;
     }
-    #Main p{
+    #Main p {
       font-size: 18px;
       margin-bottom: 2px;
     }
-    #Main ul{
+    #Main ul {
       font-size: 18px;
     }
-    #Main article{
+    #Main article {
       font-size: 18px;
     }
-    #Main code{
+    #Main code {
       background-color: #f7f7f7;
       display: block;
       text-align: left;
       white-space: pre;
-      margin:10px 10px 10px 10px;
-      padding: 10px 10px 10px 10px ;
+      margin: 10px 10px 10px 10px;
+      padding: 10px 10px 10px 10px;
       font-size: 0.96em;
     }
   </style>
   <body>
     <nav id=" navbar">
-      <header>JS Documentation</header>
-      <ol>
-        <li><a href="#Introduction">Introduction</a></li>
-        <li>
+      <h1>JS Documentation</h1>
+      <div id="ol">
+        <p class="aa"><a href="#Introduction">Introduction</a></p>
+        <p>
           <a href="#What you should already know"
             >What you should already know</a
           >
-        </li>
-        <li>
+        </p>
+        <p>
           <a href="#JavaScript and Java" class="no1">JavaScript and Java</a>
-        </li>
-        <li><a href="#Hello world">Hello world</a></li>
-        <li><a href="#Variables">Variables</a></li>
-        <li><a href="#Declaring variables">Declaring variables</a></li>
-        <li><a href="#Variable scope">Variable scope</a></li>
-        <li><a href="#Global variables">Global variables</a></li>
-        <li><a href="#Constants">Constants</a></li>
-        <li><a href="#Data types">Data types</a></li>
-        <li><a href="#if...else statement">if...else statement</a></li>
-        <li><a href="#while statement">while statement</a></li>
-        <li><a href="#Function declarations">Function declarations</a></li>
-        <li><a href="#Reference" class="aaa">Reference</a></li>
-      </ol>
+        </p>
+        <p><a href="#Hello world">Hello world</a></p>
+        <p><a href="#Variables">Variables</a></p>
+        <p><a href="#Declaring variables">Declaring variables</a></p>
+        <p><a href="#Variable scope">Variable scope</a></p>
+        <p><a href="#Global variables">Global variables</a></p>
+        <p><a href="#Constants">Constants</a></p>
+        <p><a href="#Data types">Data types</a></p>
+        <p><a href="#if...else statement">if...else statement</a></p>
+        <p><a href="#while statement">while statement</a></p>
+        <p><a href="#Function declarations">Function declarations</a></p>
+        <p><a href="#Reference" class="aaa">Reference</a></p>
+      </div>
     </nav>
     <div id="Main">
       <div id="Introduction">
