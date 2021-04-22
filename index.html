@@ -93,7 +93,7 @@
     position: relative;
   }
   #navbar ul{
-    width: 98vw;
+    width: calc(100vw - 15px);
     height: 12em;
     position: relative;
   }
@@ -105,6 +105,16 @@
     margin: 15px 0 0 0;
   }
  }
+
+ @media (max-width:265px) {
+  #navbar header{
+    height: 1em;
+  }
+  #main-doc{
+    padding: 10px;
+  }
+ }
+
  </style>
  <body>
  <nav id="navbar">
